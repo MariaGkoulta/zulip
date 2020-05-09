@@ -950,6 +950,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     dense_mode: bool = models.BooleanField(default=True)
     fluid_layout_width: bool = models.BooleanField(default=False)
     high_contrast_mode: bool = models.BooleanField(default=False)
+    theme_detection: bool = models.BooleanField(default=True)
     night_mode: bool = models.BooleanField(default=False)
     translate_emoticons: bool = models.BooleanField(default=False)
     twenty_four_hour_time: bool = models.BooleanField(default=False)
@@ -1025,6 +1026,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         fluid_layout_width=bool,
         high_contrast_mode=bool,
         left_side_userlist=bool,
+        theme_detection=bool,
         night_mode=bool,
         starred_message_counts=bool,
         timezone=str,

@@ -29,7 +29,8 @@
         {% endblock %}
     </head>
 
-    <body {% if night_mode %}class="night-mode"{% endif %}>
+    <body {% if theme_detection %} class="dark-preference-checker"
+  {% elif night_mode %} class="night-mode"{% endif %}>
         {% block content %}
         {% endblock %}
 
