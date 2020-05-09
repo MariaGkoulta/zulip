@@ -43,6 +43,7 @@ exports.get_all_display_settings = () => ({
         user_display_settings: [
             "dense_mode",
             "night_mode",
+            "theme_detection",
             "high_contrast_mode",
             "left_side_userlist",
             "starred_message_counts",

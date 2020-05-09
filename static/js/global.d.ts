@@ -150,6 +150,7 @@ declare let submessage: any;
 declare let subs: any;
 declare let tab_bar: any;
 declare let templates: any;
+declare let theme_detection: any;
 declare let tictactoe_widget: any;
 declare let timerender: any;
 declare let todo_widget: any;

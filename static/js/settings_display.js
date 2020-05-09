@@ -41,6 +41,9 @@ exports.set_up = function () {
     for (const setting of all_display_settings.settings.user_display_settings) {
         $("#" + setting).change(function () {
             const data = {};
+            if (setting === 'theme_detection') {
+                data.night_mode = JSON.stringify(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            }
             data[setting] = JSON.stringify($(this).prop('checked'));
 
             if (["left_side_userlist"].includes(setting)) {
@@ -147,6 +150,7 @@ exports.update_page = function () {
     $("#default_language_name").text(page_params.default_language_name);
     $("#translate_emoticons").prop('checked', page_params.translate_emoticons);
     $("#night_mode").prop('checked', page_params.night_mode);
+    $("#theme_detection").prop('checked', page_params.theme_detection);
     $("#twenty_four_hour_time").val(JSON.stringify(page_params.twenty_four_hour_time));
 
     // TODO: Set emojiset selector here.

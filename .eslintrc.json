@@ -379,6 +379,7 @@
                 "subs": false,
                 "tab_bar": false,
                 "templates": false,
+                "theme_detection": false,
                 "tictactoe_widget": false,
                 "timerender": false,
                 "todo_widget": false,
